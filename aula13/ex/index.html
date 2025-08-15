@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13</title>
+</head>
+<body>
+    <h1>Teste</h1>
+    <script>
+        const name = prompt("Digite seu nome completo:");
+        const desiredLetter = prompt("Digite letra desejada para análise:");
+        //_________________________________________________________________________________________________________
+        document.body.innerHTML = `O seu nome é: <strong>${name}</strong><br />`;
+
+        //_________________________________________________________________________________________________________
+        let sliptedName = name.split(' ');
+        let nameLettersCount = '';
+        for (let i = 0; i < sliptedName.length; i++) {
+            nameLettersCount += `${sliptedName[i]}`;
+        };
+        document.body.innerHTML += `Seu nome tem <strong>${nameLettersCount.length}</strong> letras<br />`;
+
+        //_________________________________________________________________________________________________________
+        document.body.innerHTML += `A segunda letra do seu nome é <strong>${name[1]}</strong><br />`;
+
+        //_________________________________________________________________________________________________________
+        let indexA = name.indexOf(`${desiredLetter}`);
+        document.body.innerHTML += `O primeiro indice da letra "a" no seu nome é: <strong>${indexA}</strong><br />`;
+
+        //_________________________________________________________________________________________________________
+        let reverseName = name.split('').reverse().join('');
+        
+        let lastIndexA = (reverseName.indexOf('a') - (reverseName.length - 1)) * -1;
+        // Ou name.lastIndexOf('a') kkkkkk
+        document.body.innerHTML += `O último indice da letra <strong>"${desiredLetter}"</strong> no seu nome é: <strong>${lastIndexA}</strong><br />`;
+
+        //_________________________________________________________________________________________________________
+        let lastThreeLetters = '';
+        for (let i = 0; i < 3; i++) {
+            lastThreeLetters += reverseName[i];
+        };
+        // Ou name.slice(-3, name.length) kkkkkkkkk
+        document.body.innerHTML += `As últimas 3 letras do seu nome são: <strong>${lastThreeLetters}</strong><br />`;
+
+        //_________________________________________________________________________________________________________
+        document.body.innerHTML += `As palavras do seu nome são: <strong>${sliptedName}</strong><br />`;
+
+        //_________________________________________________________________________________________________________
+        let upperName = name.toUpperCase();
+        document.body.innerHTML += `Seu nome com letras maiúsculas: <strong>${upperName}</strong><br />`;
+
+        //_________________________________________________________________________________________________________
+        let lowerName = name.toLowerCase();
+        document.body.innerHTML += `Seu nome com letras minúsculas: <strong>${lowerName}</strong><br />`;
+
+        // No console, document.write para escrever no HTML
+        // window.document.write(`Olá, ${nome}!`);
+    </script>
+</body>
+</html>

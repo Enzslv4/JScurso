@@ -1,6 +1,7 @@
 // let stringa = 'um \'texto\'' // forma de escapar o caracter com \ antes
 let stringa = 'um texto'
 let stringa2 = 'égua'
+console.log(stringa)
 console.log(stringa[3]) // indices em js
 console.log(stringa.charAt(8)) // para exemplificar q não dá erro se passar do num max de caracteres
 console.log(stringa.concat(stringa2)) // concatena textos
