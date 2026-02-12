@@ -2,6 +2,8 @@
 :root {
   --primary-color: #115666;
   --primary-color-darker: rgb(9, 48, 56);
+  --negative-result-color: rgb(157, 20, 20);
+  --positive-result-color: rgb(73, 181, 37);
 }
 
 * {
@@ -55,4 +57,9 @@ form button {
 
 form button:hover {
   background: var(--primary-color-darker);
+}
+
+.paragrafo-resultado {
+  background: var(--positive-result-color);
+  padding: 10px 20 px;
 }
