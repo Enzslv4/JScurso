@@ -60,8 +60,6 @@ function setResultado (msg, isValid) {
     const resultado = document.querySelector('#resultado');
     resultado.innerHTML = '';
 
-    
-
     const p = criaP(msg);
 
     if (isValid) {
