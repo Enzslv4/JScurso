@@ -5,7 +5,6 @@ const elementos = [
     {tag: 'section', texto: 'Frase 4: A frase 1 é uma verdade.'},
 ];
 
-// Capturar evento de submit do form
 const container = document.querySelector(".container");
 const div = document.createElement("div");
 
