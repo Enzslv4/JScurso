@@ -1,7 +1,7 @@
 // Capturar evento de submit do form
 const form = document.querySelector("#formulario");
 
-form.addEventListener('submit', function (e) {
+inputTarefa.addEventListener('submit', function (e) {
     e.preventDefault();
     const inputPeso = e.target.querySelector('#peso');
     const inputAltura = e.target.querySelector('#altura');
@@ -51,7 +51,7 @@ function getIMC(peso, altura) {
     return imc.toFixed(2);
 };
 
-function criaP () {
+function criaLi () {
     const p = document.createElement('p');
     return p;
 };
@@ -60,7 +60,7 @@ function setResultado (msg, isValid) {
     const resultado = document.querySelector('#resultado');
     resultado.innerHTML = '';
 
-    const p = criaP(msg);
+    const p = criaLi(msg);
 
     if (isValid) {
         p.classList.add("paragrafo-resultado")
