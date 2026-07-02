@@ -1,0 +1,302 @@
+[
+  {
+    "nome": "Valentina Carvalho",
+    "email": "valentinacarvalho@empresa.com.br",
+    "salario": 17070,
+    "estado": "PA",
+    "empresa": "Embraer",
+    "idade": 36,
+    "sexo": "F",
+    "cpf": "087.072.646-31"
+  },
+  {
+    "nome": "Felipe Alves",
+    "email": "felipealves@email.com.br",
+    "salario": 33889,
+    "estado": "BA",
+    "empresa": "Mercado Livre",
+    "idade": 54,
+    "sexo": "M",
+    "cpf": "650.755.133-36"
+  },
+  {
+    "nome": "Ana Almeida",
+    "email": "anaalmeida@empresa.com.br",
+    "salario": 21179,
+    "estado": "GO",
+    "empresa": "Petrobras",
+    "idade": 64,
+    "sexo": "F",
+    "cpf": "411.690.367-16"
+  },
+  {
+    "nome": "Manuela Oliveira",
+    "email": "manuelaoliveira@empresa.com.br",
+    "salario": 4618,
+    "estado": "SC",
+    "empresa": "Vale",
+    "idade": 41,
+    "sexo": "F",
+    "cpf": "512.473.135-49"
+  },
+  {
+    "nome": "Bruno Almeida",
+    "email": "brunoalmeida@email.com.br",
+    "salario": 25557,
+    "estado": "BA",
+    "empresa": "Stone",
+    "idade": 38,
+    "sexo": "M",
+    "cpf": "635.290.513-73"
+  },
+  {
+    "nome": "Mariana Rodrigues",
+    "email": "marianarodrigues@empresa.com.br",
+    "salario": 5582,
+    "estado": "ES",
+    "empresa": "Stone",
+    "idade": 35,
+    "sexo": "F",
+    "cpf": "928.205.924-30"
+  },
+  {
+    "nome": "Larissa Alves",
+    "email": "larissaalves@empresa.com.br",
+    "salario": 6489,
+    "estado": "RJ",
+    "empresa": "Apple",
+    "idade": 64,
+    "sexo": "F",
+    "cpf": "888.748.578-02"
+  },
+  {
+    "nome": "Maria Almeida",
+    "email": "mariaalmeida@empresa.com.br",
+    "salario": 30171,
+    "estado": "DF",
+    "empresa": "Ambev",
+    "idade": 50,
+    "sexo": "F",
+    "cpf": "856.600.838-38"
+  },
+  {
+    "nome": "Beatriz Costa",
+    "email": "beatrizcosta@empresa.com.br",
+    "salario": 29123,
+    "estado": "MG",
+    "empresa": "Petrobras",
+    "idade": 41,
+    "sexo": "F",
+    "cpf": "720.609.617-42"
+  },
+  {
+    "nome": "Maria Silva",
+    "email": "mariasilva@empresa.com.br",
+    "salario": 28398,
+    "estado": "RJ",
+    "empresa": "Bradesco",
+    "idade": 29,
+    "sexo": "F",
+    "cpf": "061.641.463-30"
+  },
+  {
+    "nome": "Valentina Souza",
+    "email": "valentinasouza@empresa.com.br",
+    "salario": 11743,
+    "estado": "AM",
+    "empresa": "Google",
+    "idade": 65,
+    "sexo": "F",
+    "cpf": "000.412.361-14"
+  },
+  {
+    "nome": "Vinicius Oliveira",
+    "email": "viniciusoliveira@email.com.br",
+    "salario": 12602,
+    "estado": "GO",
+    "empresa": "Itaú",
+    "idade": 25,
+    "sexo": "M",
+    "cpf": "939.289.249-74"
+  },
+  {
+    "nome": "Gabriel Costa",
+    "email": "gabrielcosta@email.com.br",
+    "salario": 27644,
+    "estado": "MG",
+    "empresa": "Amazon",
+    "idade": 42,
+    "sexo": "M",
+    "cpf": "389.557.750-24"
+  },
+  {
+    "nome": "Pedro Rodrigues",
+    "email": "pedrorodrigues@email.com.br",
+    "salario": 6708,
+    "estado": "BA",
+    "empresa": "Uber",
+    "idade": 53,
+    "sexo": "M",
+    "cpf": "321.765.447-14"
+  },
+  {
+    "nome": "Matheus Almeida",
+    "email": "matheusalmeida@email.com.br",
+    "salario": 11586,
+    "estado": "MT",
+    "empresa": "Mercado Livre",
+    "idade": 56,
+    "sexo": "M",
+    "cpf": "217.973.092-69"
+  },
+  {
+    "nome": "Amanda Ribeiro",
+    "email": "amandaribeiro@empresa.com.br",
+    "salario": 7259,
+    "estado": "DF",
+    "empresa": "Stone",
+    "idade": 28,
+    "sexo": "F",
+    "cpf": "251.278.842-32"
+  },
+  {
+    "nome": "Matheus Oliveira",
+    "email": "matheusoliveira@email.com.br",
+    "salario": 20122,
+    "estado": "PA",
+    "empresa": "Microsoft",
+    "idade": 37,
+    "sexo": "M",
+    "cpf": "900.690.830-45"
+  },
+  {
+    "nome": "Gustavo Almeida",
+    "email": "gustavoalmeida@email.com.br",
+    "salario": 21649,
+    "estado": "PE",
+    "empresa": "Embraer",
+    "idade": 45,
+    "sexo": "M",
+    "cpf": "255.461.474-15"
+  },
+  {
+    "nome": "Daniel Santos",
+    "email": "danielsantos@email.com.br",
+    "salario": 31302,
+    "estado": "BA",
+    "empresa": "Ambev",
+    "idade": 56,
+    "sexo": "M",
+    "cpf": "017.845.179-76"
+  },
+  {
+    "nome": "Guilherme Alves",
+    "email": "guilhermealves@email.com.br",
+    "salario": 30824,
+    "estado": "PA",
+    "empresa": "Google",
+    "idade": 46,
+    "sexo": "M",
+    "cpf": "322.398.250-73"
+  },
+  {
+    "nome": "Laura Souza",
+    "email": "laurasouza@empresa.com.br",
+    "salario": 17887,
+    "estado": "PA",
+    "empresa": "Amazon",
+    "idade": 38,
+    "sexo": "F",
+    "cpf": "110.983.872-79"
+  },
+  {
+    "nome": "Valentina Alves",
+    "email": "valentinaalves@empresa.com.br",
+    "salario": 8757,
+    "estado": "ES",
+    "empresa": "Mercado Livre",
+    "idade": 39,
+    "sexo": "F",
+    "cpf": "295.069.209-58"
+  },
+  {
+    "nome": "Valentina Alves",
+    "email": "valentinaalves@empresa.com.br",
+    "salario": 13569,
+    "estado": "CE",
+    "empresa": "Vale",
+    "idade": 20,
+    "sexo": "F",
+    "cpf": "587.439.019-72"
+  },
+  {
+    "nome": "Bruno Costa",
+    "email": "brunocosta@email.com.br",
+    "salario": 8255,
+    "estado": "PR",
+    "empresa": "Stone",
+    "idade": 62,
+    "sexo": "M",
+    "cpf": "471.344.983-01"
+  },
+  {
+    "nome": "Arthur Santos",
+    "email": "arthursantos@email.com.br",
+    "salario": 15401,
+    "estado": "CE",
+    "empresa": "Netflix",
+    "idade": 62,
+    "sexo": "M",
+    "cpf": "006.491.109-86"
+  },
+  {
+    "nome": "Beatriz Santos",
+    "email": "beatrizsantos@empresa.com.br",
+    "salario": 9460,
+    "estado": "PE",
+    "empresa": "Google",
+    "idade": 28,
+    "sexo": "F",
+    "cpf": "129.067.373-05"
+  },
+  {
+    "nome": "Larissa Gomes",
+    "email": "larissagomes@empresa.com.br",
+    "salario": 7980,
+    "estado": "MG",
+    "empresa": "Microsoft",
+    "idade": 63,
+    "sexo": "F",
+    "cpf": "925.022.236-01"
+  },
+  {
+    "nome": "Guilherme Carvalho",
+    "email": "guilhermecarvalho@email.com.br",
+    "salario": 25713,
+    "estado": "CE",
+    "empresa": "Apple",
+    "idade": 23,
+    "sexo": "M",
+    "cpf": "060.067.715-00"
+  },
+  {
+    "nome": "Daniel Ferreira",
+    "email": "danielferreira@email.com.br",
+    "salario": 17556,
+    "estado": "DF",
+    "empresa": "Itaú",
+    "idade": 24,
+    "sexo": "M",
+    "cpf": "414.034.710-45"
+  },
+  {
+    "nome": "Matheus Oliveira",
+    "email": "matheusoliveira@email.com.br",
+    "salario": 4207,
+    "estado": "DF",
+    "empresa": "Stone",
+    "idade": 32,
+    "sexo": "M",
+    "cpf": "690.790.246-00"
+  }
+]
