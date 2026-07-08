@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Enzslv4/JScurso/issues"
   },
-  "homepage": "https://github.com/Enzslv4/JScurso#readme"
+  "homepage": "https://github.com/Enzslv4/JScurso#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
