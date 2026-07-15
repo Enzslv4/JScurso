@@ -1,13 +1,19 @@
 const express = require('express');
 const app = express();
-const routes = require('./routes')
+const routes = require('./routes');
+const path = require('path')
 
 // Para receber o body do POST
 app.use(express.urlencoded({ extended:true }))
+
+// Setando views html para serem usadas
+app.set('views', path.join(__dirname, 'src', 'views'))
+
+// Setando engine para views:
+app.set('view engine', 'ejs')
+
 // Para usar as rotas
 app.use(routes)
-
-// Rotas:
 
 
 // Atribuindo porta para rodar o servidor
