@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DB_LINK,)
   .then(() => {
     app.emit('pronto');
   })
@@ -16,23 +16,33 @@ const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", 'https://cdn.jsdelivr.net'],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https://cdn.jsdelivr.net'],
+      connectSrc: ["'self'", 'https://cdn.jsdelivr.net'],
+    },
+  },
+}));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, 'frontend')));
 
-const sessionOptions = session({
-  secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()',
-  store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 7,
-    httpOnly: true
-  }
-});
-app.use(sessionOptions);
+app.use(session({
+    secret: 'uma_chave_secreta_e_segura_aqui',
+    // Adicione a propriedade store usando o MongoStore.create:
+    store: MongoStore.create({ mongoUrl: process.env.DB_LINK }), 
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7, // 7 dias em milissegundos
+        httpOnly: true
+    }
+}));
 app.use(flash());
 
 app.set('views', path.resolve(__dirname, 'src', 'views'));
