@@ -1,12 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Agenda</title>
-</head>
-<body>
-    <h1>Contato</h1>
-    <form action=""></form>
-</body>
-</html>
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+<% if(user) { %>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 my-3">
+                <h1 class="text-center">Contato</h1>
+                <p class="text-center lead">Crie ou edite seus contatos.</p>
+
+                <%- include('includes/messages') %>
+
+                <% if(locals.contact && contact._id) { %>
+                    <form action="/contact/edit/<%= contact._id %>" method="post">
+                <% } else { %>
+                    <form action="/contact/register" method="post">
+                <% } %>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Nome do contato</label>
+                        <input value="<%= locals.contact ? contact.name : '' %>" type="text" class="form-control" name="contact_name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Sobrenome do contato</label>
+                        <input value="<%= locals.contact ? contact.surname : '' %>" type="text" class="form-control" name="contact_surname">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">N° do contato</label>
+                        <input value="<%= locals.contact ? contact.cttNumber : '' %>" type="tel" class="form-control" name="contact_number" placeholder="(__) _____-____">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input value="<%= locals.contact ? contact.email : '' %>" type="email" class="form-control" name="contact_email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+<% } %>
+<%- include('includes/footer') %>

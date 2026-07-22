@@ -7,18 +7,14 @@
           <h1 class="text-center">Tenha acesso à Agenda</h1>
           <p class="text-center lead">Preencha os campos abaixo:</p>
 
-          <div class="row">
-            <div class="col my-3">
-              <div class="alert alert-danger">Um erro</div>
-            </div>
-          </div>
+            <%- include('includes/messages') %>
 
           <div class="row">
             <div class="col-lg">
                 <h4>Faça seu cadastro</h4>
                 <p>Se ainda não tem registro, registre agora:</p>
-                <form action="/login/register" method="post">
-                    <input type="hidden" name="_csrf" value="<% csrfToken %>">
+                <form class="form-registration" action="/login/register" method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                     <div class="mb-3">
                         <label class="form-label">Email</label>
                         <input type="email" class="form-control" name="email">
@@ -38,8 +34,8 @@
             <div class="col-lg">
                 <h4>Entrar no sistema</h4>
                 <p>Se já está cadastrado, insira suas informações abaixo:</p>
-                <form action="/login/login" method="post">
-                    <input type="hidden" name="_csrf" value="<% csrfToken %>">
+                <form class="form-login" action="/login/login" method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                     <div class="mb-3">
                         <label class="form-label">Email</label>
                         <input type="email" class="form-control" name="email">

@@ -1,32 +1,70 @@
 <%- include('includes/head') %>
 <%- include('includes/nav') %>
+<% if(user) { %>
     <div class="container">
       <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8 my-3">
           <h1 class="text-center">Agenda</h1>
-          <p class="text-center lead">Seus contatos estão abaixo:</p>
 
-          <div class="row">
-            <div class="col my-3">
-              <div class="alert alert-danger">Um erro</div>
-            </div>
-          </div>
-
-          <div class="resposive-table">
+          <%- include('includes/messages') %>
+          
+          <% if(contacts.length > 0) { %>
+            <p class="text-center lead">Seus contatos estão abaixo:</p>
+          <div class="table-responsive">
             <table class="table my-3">
-              <tr>
-                <td>Enzo</td>
-                <td>Silva</td>
-                <td>(11)11111-1111</td>
-                <td>a@a.co</td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Sobrenome</th>
+                  <th>Telefone</th>
+                  <th>E-mail</th>
+                  <th>Editar</th>
+                  <th>Excluir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% contacts.forEach(contact => { %>
+                  <tr>
+                    <td><%= contact.name %></td>
+                    <td><%= contact.surname %></td>
+                    <td><%= contact.cttNumber %></td>
+                    <td><%= contact.email %></td>
+                    <td>
+                      <a href="/contact/<%= contact._id %>" class="btn btn-warning btn-sm">Editar</a>
+                    </td>
+                    <td>
+                      <a href="/contact/delete/<%= contact._id %>" class="btn btn-danger btn-sm">Excluir</a>
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
             </table>
           </div>
-
-        </div>
+          <% } else { %>
+            <br>
+            <p class="text-center lead">Sem contatos cadastrados</p>
+            <div class="d-flex justify-content-center my-3">
+              <a href="/contact" class="btn btn-success">Adicionar um novo contato</a>
+            </div>
+          <% } %>
         <div class="col-lg-2"></div>
       </div>
     </div>
+<% } else { %>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8 my-3 text-center">
+        <h1>Bem-vindo à Agenda</h1>
+        <p class="lead">Organize seus contatos em um só lugar.</p>
+        <p>Faça login ou crie sua conta para começar.</p>
 
+        <%- include('includes/messages') %>
+        <a href="/login" class="btn btn-primary my-3">Entrar ou cadastrar</a>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+<% } %>
 <%- include('includes/footer') %>
