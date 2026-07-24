@@ -29,7 +29,7 @@ export default class Login {
             error = true
         }
 
-        if(passwordInput.value.length < 8 || passwordInput.value.length > 50)) {
+        if(passwordInput.value.length < 8 || passwordInput.value.length > 50) {
             alert('Sua senha precisa ter entre 8 e 50 caracteres.')
             error = true
         }
