@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // Form
-import {FaPlus} from "react-icons/fa"
+import Form from "./Form";
 
 // Form
 import {FaEdit, FaWindowClose} from "react-icons/fa"
@@ -11,11 +11,24 @@ import './Main.css'
 export default class Main extends Component {
     state = {
         novaTarefa: "",
-        tarefas: [
-            'Fazer Café',
-            'Beber água',
-            'Estudar'
-        ],
+        tarefas: [],
+        index: -1
+    }
+
+    componentDidMount() {
+        const tarefas = JSON.parse(localStorage.getItem('tarefas'))
+
+        if (!tarefas) return
+
+        this.setState({tarefas})
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        const {tarefas} = this.state
+
+        if(tarefas === prevState.tarefas) return;
+
+        localStorage.setItem('tarefas', JSON.stringify(tarefas))
     }
 
     handleSubmit = (e) => {
@@ -76,13 +89,7 @@ export default class Main extends Component {
         return (
             <div className="main">
                 <h1>Lista de tarefas</h1>
-
-                <form onSubmit={this.handleSubmit} action="#" className="form">
-                    <input onChange={this.handleChange} type="text" value={novaTarefa}/>
-                    <button type="submit">
-                        <FaPlus />
-                    </button>
-                </form>
+                <Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} novaTarefa={novaTarefa}/>
                 <ul className="tarefas">
                     {tarefas.map((tarefa, index) => (
                         <li key={tarefa}>
